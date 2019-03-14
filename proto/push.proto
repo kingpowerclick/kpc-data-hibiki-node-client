@@ -1,0 +1,18 @@
+syntax = "proto3";
+package protobuf;
+
+message PushRequest {
+    string topic = 1;
+    uint64 eventTime = 2;
+    string payload = 3;
+    string payloadKey = 4;
+}
+
+message Response {
+    bool isSuccess = 1;
+}
+
+service PusherService {
+    rpc PushMessage (PushRequest) returns (Response) {
+    }
+}

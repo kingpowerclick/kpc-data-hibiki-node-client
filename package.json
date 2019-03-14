@@ -1,0 +1,32 @@
+{
+  "name": "@kingpower/kpc-data-hibiki-node-client",
+  "version": "1.0.1",
+  "description": "kpc data hibiki for node client",
+  "main": "index.js",
+  "scripts": {
+    "build:proto:js": "grpc_tools_node_protoc --js_out=import_style=commonjs,binary:. --grpc_out=. --plugin=protoc-gen-grpc=node_modules/grpc-tools/bin/grpc_node_plugin proto/*.proto",
+    "build:proto:ts": "node_modules/grpc-tools/bin/protoc --plugin=protoc-gen-ts=node_modules/grpc_tools_node_protoc_ts/bin/protoc-gen-ts --ts_out=. proto/*.proto",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kingpowerclick/kpc-data-hibiki-node-client.git"
+  },
+  "keywords": [
+    "grpc",
+    "data",
+    "client"
+  ],
+  "author": "kingpower",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kingpowerclick/kpc-data-hibiki-node-client/issues"
+  },
+  "homepage": "https://github.com/kingpowerclick/kpc-data-hibiki-node-client#readme",
+  "dependencies": {
+    "google-protobuf": "~3.7.0",
+    "grpc": "~1.19.0",
+    "grpc-tools": "~1.7.1",
+    "grpc_tools_node_protoc_ts": "~2.5.0"
+  }
+}
